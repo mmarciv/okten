@@ -1,0 +1,35 @@
+body, html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.float-left {
+    float: left;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+img {;
+    border: 5px dotted brown;
+    margin: 5px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #000;
+}
