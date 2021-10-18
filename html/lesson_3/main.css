@@ -16,18 +16,15 @@ body, html {
     min-height: 200px;
     box-sizing: border-box;
     box-shadow: 5px 5px 50px #e3e3e3;
+    display: flex;
+}
+
+.article .image {
+    margin: 15px;
 }
 
 .article p {
     text-align: justify;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
 }
 
 h1 {
