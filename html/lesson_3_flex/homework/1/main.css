@@ -1,0 +1,25 @@
+.wrap {
+    display: flex;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.a {
+    background-color: darkgray;
+    flex-basis: 100%;
+    height: 200px;
+}
+
+.b {
+    background-color: #e3e3e3;
+    flex-grow: 1;
+    height: 500px;
+}
+
+.c {
+    background-color: aqua;
+    flex-basis: 200px;
+    height: 500px;
+}

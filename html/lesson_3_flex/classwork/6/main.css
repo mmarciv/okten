@@ -1,0 +1,37 @@
+.wrap {
+    display: flex;
+    background-color: aliceblue;
+    gap: 10px;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrap-1 {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.wrap-2 {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.home, .about {
+    background-color: cornflowerblue;
+    flex-grow: 1;
+    height: 200px;
+}
+
+.kabobs {
+    height: 400px;
+    background-color: cornflowerblue;
+}
+
+.kabobs-shish, .kabobs-bbq, .kabobs-summer {
+    background-color: cornflowerblue;
+    height: 200px;
+    flex-grow: 1;
+}
