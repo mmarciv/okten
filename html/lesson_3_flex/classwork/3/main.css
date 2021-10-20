@@ -5,6 +5,8 @@
     gap: 10px;
     text-align: center;
     color: #fff;
+    border: 10px solid darkgray;
+    padding: 10px;
 }
 
 .wrap-1 {

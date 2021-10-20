@@ -1,10 +1,9 @@
 .wrap {
     display: flex;
-    background-color: aliceblue;
-    gap: 10px;
-    text-align: center;
     gap: 10px;
     flex-wrap: wrap;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .wrap-1 {
@@ -15,8 +14,18 @@
 
 .block-1 {
     flex-basis: 100%;
-    background-color: blueviolet;
+    background-color: #e3e3e3;
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.block-1-item {
+    background-color: darkgray;
+    height: 50px;
+    width: 100px;
 }
 
 .wrap-2 {
@@ -28,34 +37,39 @@
 
 .block-2 {
     flex-basis: 200px;
-    background-color: cyan;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block-2-item {
+    background-color: #e3e3e3;
+    height: 50px;
 }
 
 .block-3 {
     flex-basis: 100%;
-    background-color: blue;
+    background-color: #e3e3e3;
     height: 400px;
     display: flex;
     gap: 10px;
 }
 
 .block-3-1 {
-    background-color: yellowgreen;
+    background-color: #e3e3e3;
     flex-grow: 1;
 }
 
 .block-4 {
     display: flex;
     flex-basis: 100%;
-    background-color: yellow;
     height: 200px;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
-.block-4-1 {
+.block-4-item {
     background-color: #e3e3e3;
-    flex: 1 3 100px;
+    flex-basis: 25%;
 }
 
 .wrap-3 {
@@ -64,18 +78,47 @@
 }
 
 .block-5 {
-    flex-grow: 4;
-    background-color: orchid;
-    height: 700px;
+    flex-grow: 3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.block-5-item {
+    background-color: #e3e3e3;
+    width: 49%;
+    height: 200px;
 }
 
 .block-6 {
     flex-grow: 1;
-    background-color: darkolivegreen;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block-6-item {
+    background-color: #e3e3e3;
+    height: 100px;
 }
 
 .block-7 {
     flex-basis: 100%;
-    background-color: crimson;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-7-item {
+    background-color: #e3e3e3;
+    height: 40px;
+    width: 100%;
+}
+
+.block-7-item-small {
+    width: 200px;
+    height: 40px;
+    background-color: #e3e3e3;
 }
