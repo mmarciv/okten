@@ -1,0 +1,160 @@
+.header {
+    height: 50px;
+    background-color: cornflowerblue;
+}
+
+.header .inner-width {
+    justify-content: right;
+}
+
+.navigate {
+    height: 100px;
+    background-color: #e3e3e3;
+}
+
+.navigate .logo {
+    height: 50px;
+    width: 100px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.navigate .inner-width {
+    justify-content: space-between;
+}
+
+.slider {
+    height: 400px;
+    background-color: cornflowerblue;
+}
+
+.slider .description {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.square-boxes {
+    height: 400px;
+    background-color: #e3e3e3;
+}
+
+.rounded-boxes {
+    height: 400px;
+    background-color: grey;
+}
+
+.rounded-boxes .box-item .box-item-img {
+    width: 200px;
+    height: 200px;
+    flex-grow: 1;
+    background-color: darkgray;
+    border-radius: 50%;
+}
+
+.content {
+    background-color: #e3e3e3;
+}
+
+.footer {
+    height: 100px;
+    background-color: grey;
+}
+
+.inner-width {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    margin: 10px;
+}
+
+.btn {
+    height: 40px;
+    width: 150px;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.box-wrap {
+    gap: 10px;
+    width: 100%;
+    margin: 10px;
+}
+
+.box-item {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 20px;
+}
+
+.box-item .box-item-img {
+    width: 100%;
+    height: 200px;
+    flex-grow: 1;
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+.box-item .box-item-desc {
+    padding: 10px;
+}
+
+.box-item .box-item-bottom {
+    border-top: 5px solid cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.rounded-border {
+    border-radius: 30px;
+    border: 5px solid cornflowerblue;
+}
+
+.content .box-item {
+    padding: 0;
+}
+
+.content .box-item .box-item-img {
+    margin: 10px;
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content .box-left {
+    height: 400px;
+    background-color: grey;
+    flex-grow: 1;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content .box-right {
+    height: 400px;
+    background-color: cornflowerblue;
+    flex-grow: 1;
+    padding: 40px;
+    box-sizing: border-box;
+}
