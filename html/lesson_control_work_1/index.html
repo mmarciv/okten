@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AVT-ZAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+<div class="document-wrapper">
+    <div class="header">
+        <!-- header top -->
+        <div class="header__top">
+            <nav class="navbar navbar-expand-xl wrapper">
+                <div class="container-fluid d-flex justify-content-between">
+                    <ul class="permanent-links navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img class="px-2" src="img/placeholder.png" alt="Ваш город">Ваш город: Москва
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Информация
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                                <li><a class="dropdown-item" href="#">Информация</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Сотрудничество
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                <li><a class="dropdown-item" href="#">Сотрудничество</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarWithDropdown" aria-controls="navbarWithDropdown"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarWithDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Доставка</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Оплата</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Гарантия</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Новости</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Журнал</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О магазине</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- header middle -->
+        <div class="header__middle wrapper">
+            <div class="header__middle__info">
+                <div class="header__middle__info-brand">
+                    <div class="brand__name">AVT-ZAP</div>
+                    <div class="brand__desc">
+                        Интернет-магазин запчастей<br>
+                        для АКПП
+                    </div>
+                </div>
+                <div class="header__middle__info-work-hours">
+                    Мы работаем: будни - 9:00-21:00<br>
+                    сб. - 10:00-15:00
+                </div>
+                <div class="header__middle__info-map">
+                    Невский пр-т, д. 45
+                </div>
+                <div class="header__middle__info-whatsapp">
+                    <div class="header__middle__info-whatsapp-btn">Напишите нам в WhatsApp</div>
+                </div>
+                <div class="header__middle__info-contact-phone">
+                    <div class="header__phone">+7 383 291 92 86</div>
+                    <div class="header__feedback">форма обратной связи</div>
+                </div>
+            </div>
+            <div class="header__middle__catalog">
+                <div class="header__middle__catalog__left">
+                    <div class="header__middle__catalog-btn">
+                        <img class="header__middle__catalog-btn-icon" src="img/humb.png" alt="humb">
+                        <div>Каталог</div>
+                    </div>
+                    <div class="header__middle__search-input">
+                        <div class="input-group">
+                            <input class="header__middle__input" type="text"
+                                   placeholder="Поиск по наименованию или артикулу">
+                            <div class="header__middle__search-input-btn">Найти</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__middle__catalog__right">
+                    <div class="login-link d-flex align-items-center">
+                        <img src="img/user.png" alt="user">
+                        <div>Войти</div>
+                    </div>
+                    <div class="favorite-link d-flex align-items-center">
+                        <img src="img/heart.png" alt="heart">
+                        <div>Избранное</div>
+                    </div>
+                    <div class="cart-link d-flex align-items-center">
+                        <img src="img/cart.png" alt="user">
+                        <div>В корзине<br> нет товаров</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <!-- large slider -->
+        <div class="content__large-slider wrapper">
+            <div class="content__large-slider__slider">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/slides/slide1large.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Сцепление в сборе</h3>
+                                <h2>0AMCLUTCH</h2>
+                                <div class="slider-img-price">
+                                    14 499,99 ₽
+                                    <span class="slider-img-discount-price">18 550,99 ₽ </span>
+                                </div>
+                                <div class="slider-img-btn">
+                                    <img src="img/smcart.png" alt="small cart">
+                                    <div>В корзину</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slides/slide1large.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Сцепление в сборе</h3>
+                                <h2>0AMCLUTCH</h2>
+                                <div class="slider-img-price">
+                                    14 499,99 ₽
+                                    <span class="slider-img-discount-price">18 550,99 ₽ </span>
+                                </div>
+                                <div class="slider-img-btn">
+                                    <img src="img/smcart.png" alt="small cart">
+                                    <div>В корзину</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/slides/slide1large.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Сцепление в сборе</h3>
+                                <h2>0AMCLUTCH</h2>
+                                <div class="slider-img-price">
+                                    14 499,99 ₽
+                                    <span class="slider-img-discount-price">18 550,99 ₽ </span>
+                                </div>
+                                <div class="slider-img-btn">
+                                    <img src="img/smcart.png" alt="small cart">
+                                    <div>В корзину</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content__large-slider__campaign">
+                <div class="content__large-slider__campaign__item">
+                    <div class="content__campaign-tag">Акция</div>
+                    <div class="content__large-slider__campaign__item-icon">
+                        <img src="img/campaign/product1.png" alt="">
+                    </div>
+                    <div class="content__large-slider__campaign__item-body">
+                        <div class="content__large-slider__campaign__item-name">
+                            Обгонная муфта гидротрансформатор
+                        </div>
+                        <div class="content__large-slider__campaign__item-sku">
+                            BW-SP-2 SONNAX
+                        </div>
+                        <div class="content__large-slider__campaign__item-price-wrap">
+                            <div class="content__large-slider__campaign__item-price">
+                                4 430₽
+                                <span class="content__large-slider__campaign__item-price-changed">
+                                        5 430₽
+                                    </span>
+                            </div>
+                            <div class="content__large-slider__campaign__item-cart-btn">
+                                <img src="img/smcart.png" alt="small cart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__large-slider__campaign__item">
+                    <div class="content__campaign-tag">Акция</div>
+                    <div class="content__large-slider__campaign__item-icon">
+                        <img src="img/campaign/product2.png" alt="">
+                    </div>
+                    <div class="content__large-slider__campaign__item-body">
+                        <div class="content__large-slider__campaign__item-name">
+                            Комплект фрикционных дисков
+                        </div>
+                        <div class="content__large-slider__campaign__item-sku">
+                            BW-SP-2 SONNAX
+                        </div>
+                        <div class="content__large-slider__campaign__item-price-wrap">
+                            <div class="content__large-slider__campaign__item-price">
+                                4 430₽
+                                <span class="content__large-slider__campaign__item-price-changed">
+                                        5 430₽
+                                    </span>
+                            </div>
+                            <div class="content__large-slider__campaign__item-cart-btn">
+                                <img src="img/smcart.png" alt="small cart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- small slider-->
+        <div class="content__inline-slider wrapper">
+
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-item__wrapper">
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Масла
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Трансмиссионное масло;<br>
+                                        присалка в масло акпп
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product1.png" alt="Масла">
+                                </div>
+                            </div>
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Фильтры
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Масляный фильтр;<br>
+                                        фильтр воздушный
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product2.png" alt="Фильтры">
+                                </div>
+                            </div>
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Радиаторы
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Дополнительные <br>
+                                        радиаторы
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product3.png" alt="Радиаторы">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item__wrapper">
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Масла
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Трансмиссионное масло;<br>
+                                        присалка в масло акпп
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product1.png" alt="Масла">
+                                </div>
+                            </div>
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Фильтры
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Масляный фильтр;<br>
+                                        фильтр воздушный
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product2.png" alt="Фильтры">
+                                </div>
+                            </div>
+                            <div class="content__inline-slider__item">
+                                <div class="content__inline-slider__item-body">
+                                    <div class="content__inline-slider__item-body__title">
+                                        Радиаторы
+                                    </div>
+                                    <div class="content__inline-slider__item-body__desc">
+                                        Дополнительные <br>
+                                        радиаторы
+                                    </div>
+                                    <div class="content__inline-slider__item-body__btn">
+                                        Перейти
+                                    </div>
+                                </div>
+                                <div class="content__inline-slider__item-img">
+                                    <img src="img/slides/inline/product3.png" alt="Радиаторы">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- product list filter -->
+        <div class="product-list-filter wrapper">
+            <div class="product-list-filter__btn-podborka">
+                Подборки товаров
+            </div>
+            <div class="product-list-filter__btn-campaign">
+                Акции
+            </div>
+            <div class="product-list-filter__btn-top">
+                Сейчас покупают
+            </div>
+        </div>
+
+        <!-- product list -->
+        <div class="product-list wrapper">
+
+
+            <div class="product-list__item">
+                <div class="product-list__item-img">
+                    <img src="img/products/p1.png" alt="Intermediate accumelator sleeve">
+                </div>
+                <div class="product-list__item-feedback">
+                    <img src="img/star.png" alt="feedback">
+                    4.5 <span class="product-list__item-feedback-grey">10 отзывов</span>
+                </div>
+                <div class="product-list__item-name">
+                    Intermediate accumelator sleeve
+                </div>
+                <div class="product-list__item-price">
+                    ЦЕНА <a href="">по запросу</a>
+                </div>
+                <div class="product-list__item-buy">
+                    <div class="product-list__item-buy__btn">
+                        <img src="img/smcart.png" alt="small cart">
+                        <div>В корзину</div>
+                    </div>
+                    <div class="product-list__item-buy__fav"></div>
+                    <div class="product-list__item-buy__chart"></div>
+                </div>
+            </div>
+
+            <div class="product-list__item">
+                <div class="product-list__item-img">
+                    <img src="img/products/p2.png" alt="Intermediate accumelator sleeve">
+                </div>
+                <div class="product-list__item-feedback">
+                    <img src="img/star.png" alt="feedback">
+                    4.5 <span class="product-list__item-feedback-grey">10 отзывов</span>
+                </div>
+                <div class="product-list__item-name">
+                    Комплект фрикционных дисков
+                </div>
+                <div class="product-list__item-price yellow">
+                    4 430₽
+                </div>
+                <div class="product-list__item-buy">
+                    <div class="product-list__item-buy__btn">
+                        <img src="img/smcart.png" alt="small cart">
+                        <div>В корзину</div>
+                    </div>
+                    <div class="product-list__item-buy__fav"></div>
+                    <div class="product-list__item-buy__chart"></div>
+                </div>
+            </div>
+
+            <div class="product-list__item">
+                <div class="product-list__item-img">
+                    <img src="img/products/p1.png" alt="Intermediate accumelator sleeve">
+                </div>
+                <div class="product-list__item-feedback">
+                    <img src="img/star.png" alt="feedback">
+                    4.5 <span class="product-list__item-feedback-grey">10 отзывов</span>
+                </div>
+                <div class="product-list__item-name">
+                    Intermediate accumelator sleeve
+                </div>
+                <div class="product-list__item-price">
+                    ЦЕНА <a href="">по запросу</a>
+                </div>
+                <div class="product-list__item-buy">
+                    <div class="product-list__item-buy__btn">
+                        <img src="img/smcart.png" alt="small cart">
+                        <div>В корзину</div>
+                    </div>
+                    <div class="product-list__item-buy__fav"></div>
+                    <div class="product-list__item-buy__chart"></div>
+                </div>
+            </div>
+
+            <div class="product-list__item">
+                <div class="product-list__item-img">
+                    <img src="img/products/p3.png" alt="Intermediate accumelator sleeve">
+                </div>
+                <div class="product-list__item-feedback">
+                    <img src="img/star.png" alt="feedback">
+                    4.5 <span class="product-list__item-feedback-grey">10 отзывов</span>
+                </div>
+                <div class="product-list__item-name">
+                    Intermediate accumelator sleeve
+                </div>
+                <div class="product-list__item-price">
+                    ЦЕНА <a href="">по запросу</a>
+                </div>
+                <div class="product-list__item-buy">
+                    <div class="product-list__item-buy__btn">
+                        <img src="img/smcart.png" alt="small cart">
+                        <div>В корзину</div>
+                    </div>
+                    <div class="product-list__item-buy__fav"></div>
+                    <div class="product-list__item-buy__chart"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
