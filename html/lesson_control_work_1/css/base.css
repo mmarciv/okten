@@ -57,6 +57,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     padding: 25px 20px;
+    gap: 20px;
 }
 
 .header__middle__info-brand {
@@ -208,7 +209,7 @@ html, body {
     display: flex;
     align-items: center;
     column-gap: 10px;
-    width: 80%;
+    width: 60%;
 }
 
 .header__middle__input {
@@ -225,7 +226,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 20px;
+    column-gap: 60px;
 }
 
 .header__middle__search-input {
@@ -285,9 +286,14 @@ html, body {
 }
 
 .content__large-slider {
-    padding: 20px;
     display: flex;
-    column-gap: 10px;
+    gap: 10px;
+}
+
+.content__large-slider__mask-image {
+    position: absolute;
+    top: 5%;
+    right: 5%;
 }
 
 .content__large-slider__campaign {
@@ -420,7 +426,7 @@ html, body {
 }
 
 .content__inline-slider {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .slider-img-btn img,
@@ -488,7 +494,7 @@ html, body {
 }
 
 .product-list-filter {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .product-list-filter__btn-podborka {
@@ -519,9 +525,8 @@ html, body {
 }
 
 .product-list {
-    padding: 20px;
     display: flex;
-    column-gap: 20px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -567,7 +572,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 10px;
+    gap: 20px;
 }
 
 .product-list__item-price {
@@ -644,7 +649,7 @@ html, body {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .news__list__item__date {
@@ -691,8 +696,9 @@ html, body {
 .news__list {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
+    gap: 20px;
     align-items: baseline;
+    padding: 0 20px 100px 20px;
 }
 
 .footer {
@@ -700,7 +706,7 @@ html, body {
 }
 
 .footer__inner {
-    padding: 30px 0 0 0;
+    padding: 20px 20px 0 20px;
 }
 
 .footer__links {
