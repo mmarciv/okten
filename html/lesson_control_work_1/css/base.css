@@ -1,13 +1,13 @@
 html, body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Roboto, serif;
     font-style: normal;
 }
 
 .header {
     background: #FFFFFF;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .header__top {
@@ -74,7 +74,7 @@ html, body {
     width: 70px;
     height: 70px;
     position: absolute;
-    left: 0px;
+    left: 0;
 }
 
 .header__middle__info-work-hours {
@@ -85,7 +85,6 @@ html, body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    text-align: right;
     color: #0F2438;
 }
 
@@ -98,7 +97,7 @@ html, body {
     width: 32px;
     height: 32px;
     position: absolute;
-    left: 0px;
+    left: 0;
 }
 
 .header__middle__info-map {
@@ -121,7 +120,7 @@ html, body {
     width: 32px;
     height: 32px;
     position: absolute;
-    left: 0px;
+    left: 0;
 }
 
 .header__middle__info-whatsapp-btn {
@@ -235,7 +234,7 @@ html, body {
 
 .header__middle__search-input-btn {
     background: #005BB9;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,6 +351,7 @@ html, body {
     line-height: 23px;
     color: #FFB800;
 }
+
 .content__large-slider__campaign__item-price-changed {
     font-size: 16px;
     line-height: 19px;
@@ -479,8 +479,6 @@ html, body {
 }
 
 .content__inline-slider__item-body__title {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
@@ -517,7 +515,6 @@ html, body {
     box-sizing: border-box;
     border-radius: 6px;
     padding: 16px 32px;
-    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -533,6 +530,7 @@ html, body {
     max-width: 300px;
     padding: 10px;
 }
+
 .product-list__item-img {
     max-width: 276px;
     height: 235px;
@@ -565,7 +563,7 @@ html, body {
 }
 
 .product-list__item-buy {
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -622,11 +620,18 @@ html, body {
     align-items: center;
     color: #005BB9;
     padding: 15px 40px;
-    box-sizing: border-box;
 }
 
 .news__list__wrapper {
-    background: #F5F5F5;
+    position: relative;
+}
+
+.news__list__wrapper::before {
+    content: "";
+    height: 10px;
+    background-color: #F5F5F5;
+    width: 100%;
+    position: absolute;
 }
 
 .news__list__item {
@@ -639,7 +644,7 @@ html, body {
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .news__list__item__date {
@@ -685,8 +690,7 @@ html, body {
 
 .news__list {
     display: flex;
-    align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     padding-bottom: 100px;
     align-items: baseline;
 }
@@ -758,9 +762,8 @@ html, body {
 }
 
 .footer__subscribe__btn {
-    display: inline-block;
     background: #005BB9;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
