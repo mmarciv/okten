@@ -1,0 +1,211 @@
+@media screen and (max-width: 768px) {
+    .header__middle__info-work-hours__wrap,
+    .header__middle__info-whatsapp__wrap {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 10px;
+    }
+
+    .header .nav-link {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .brand__desc {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .header__middle__info-work-hours {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .header__phone {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .header__middle__info-whatsapp-btn {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .header__middle__catalog-btn-label {
+        display: none;
+    }
+
+    .header__middle__catalog-btn {
+        padding: 16px;
+        height: 43px;
+        width: 43px;
+    }
+
+    .header__middle__catalog-btn-icon {
+        margin: 0px;
+    }
+
+    .header__middle__input {
+        height: 43px;
+    }
+
+    .header__middle__search-input-btn {
+        padding: 18px 30px;
+        height: 43px;
+        box-sizing: border-box;
+    }
+
+    .login-link, .favorite-link, .cart-link {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-link img, .favorite-link img, .cart-link img {
+        margin: 0px;
+    }
+
+    .carousel-item > img {
+        height: 314px !important;
+    }
+
+    .carousel-caption h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .slider-img-price {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .slider-img-discount-price {
+        font-size: 18px;
+        line-height: 21px;
+        display: block;
+    }
+
+    .slider-img-btn, .product-list__item-buy__btn {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .content__campaign-tag {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .content__large-slider__campaign__item-name {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .content__large-slider__campaign__item-sku {
+        font-size: 10px;
+        line-height: 12px;
+        padding-bottom: 10px;
+    }
+
+    .content__large-slider__campaign__item-price-changed {
+        font-size: 14px;
+        line-height: 16px;
+        display: block;
+    }
+
+    .content__large-slider__campaign__item-price {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .content__large-slider__campaign__item-cart-btn {
+        width: 39px;
+        height: 39px;
+    }
+
+    .content__inline-slider__item-body__title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .content__inline-slider__item-body__desc {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .content__inline-slider__item-body {
+        padding: 20px;
+    }
+
+    .product-list-filter__btn-podborka,
+    .product-list-filter__btn-campaign,
+    .product-list-filter__btn-top {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .product-list__item-feedback,
+    .product-list__item-feedback-grey {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .product-list__item-name {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .product-list__item-price {
+        font-size: 13px;
+        line-height: 15px;
+        height: 30px;
+    }
+
+    .product-list__item-price.yellow {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .product-list__item-buy {
+        padding: 10px 0;
+        column-gap: 20px;
+    }
+
+    .show-next-products-btn {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .news__title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .footer__links {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px
+    }
+
+    .footer__contact {
+        max-width: 100%;
+    }
+
+    .footer__subscribe {
+        width: 100%;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+}
