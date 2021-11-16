@@ -15,7 +15,7 @@ html, body {
     box-sizing: border-box;
 }
 
-.wrapper {
+.d-flex {
     max-width: 1354px;
     margin: 0 auto;
 }
