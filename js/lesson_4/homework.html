@@ -5,6 +5,112 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 
+    // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+    function squareRect(a, b) {
+        return a * b;
+    }
+
+    console.log('створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б');
+    console.log(squareRect(3, 5));
+
+    // - створити функцію яка обчислює та повертає площу кола з радіусом r
+    function squareCycle(r) {
+        return Math.PI * Math.pow(r, 2);
+    }
+
+    console.log('створити функцію яка обчислює та повертає площу кола з радіусом r');
+    console.log(squareCycle(7));
+
+    // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+    function squareCylinder(h, r) {
+        return 2 * Math.PI * r * h;
+    }
+
+    console.log('створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r');
+    console.log(squareCylinder(7, 2));
+
+    // - створити функцію яка приймає масив та виводить кожен його елемент
+    function printArray(arr) {
+        for (const arrElement of arr) {
+            console.log(arrElement);
+        }
+    }
+
+    console.log('створити функцію яка приймає масив та виводить кожен його елемент');
+    printArray([7, 2, 5, 6, 3, 3, 2, 7]);
+
+    // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+    function printParagraphWithText(text) {
+        document.write(`<p>${text}</p>`);
+    }
+
+    printParagraphWithText('створити функцію яка приймає масив та виводить кожен його елемент');
+
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function printUlText(text) {
+        document.write('<ul>');
+        for (let i = 0; i < 3; i++) {
+            document.write(`<li>${text}</li>`);
+        }
+        document.write('</ul>');
+    }
+
+    printParagraphWithText('створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий');
+    printUlText('створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий')
+
+    // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+    function printUlTextLiSize(text, size) {
+        document.write('<ul>');
+        for (let i = 0; i < size; i++) {
+            document.write(`<li>${text}</li>`);
+        }
+        document.write('</ul>');
+    }
+
+    printParagraphWithText('створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)');
+    printUlTextLiSize('Текст li задати через аргумент всім однаковий', 10);
+
+    // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    function createList(arr) {
+        document.write('<ul>');
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`<li>${arr[i]}</li>`);
+        }
+        document.write('</ul>');
+    }
+
+    printParagraphWithText('створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список');
+    createList([1, 5, 'sad', 'wweqeqwe', `12`, 34234, false]);
+
+    // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+    function printListObjs(arr) {
+        document.write('<div class="user-list">');
+        for (const user of arr) {
+            document.write('<div class="user-box">');
+            document.write(`<h2>${user.id} - ${user.name} - ${user.age}</h2>`);
+            document.write('</div><hr>');
+        }
+        document.write('</div>');
+    }
+
+    printParagraphWithText('створити функцію яка приймає масив об\'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об\'єкту окремий блок.');
+    let users = [{
+        id: 1,
+        name: 'Petro',
+        age: 21
+    }, {
+        id: 2,
+        name: 'Ivan',
+        age: 26
+    }, {
+        id: 3,
+        name: 'Mykola',
+        age: 18
+    }]
+    printListObjs(users);
+
+</script>
 </body>
 </html>
