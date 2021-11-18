@@ -5,6 +5,82 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 
+    // - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
+    function joinArgs() {
+        if (arguments.length === 1) {
+            console.log(arguments[0]);
+        } else {
+            if (arguments.length > 1) {
+                let joinAll = "";
+                for (const argument of arguments) {
+                    joinAll += argument;
+                }
+                console.log(joinAll);
+            }
+        }
+    }
+
+    console.log('Task 1');
+    joinArgs(1)
+    joinArgs(1, 2, 3, 'ss');
+
+    /*- створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
+        EXAMPLE:
+        [1,2,3,4]
+        [2,3,4,5]
+    результат
+        [3,5,7,9] */
+
+    function sumArrayElements(arr1, arr2) {
+        if (arr1.length !== arr2.length) {
+            return;
+        }
+        let arr3 = [];
+        for (let i = 0; i < arr1.length; i++) {
+            arr3[i] = arr1[i] + arr2[i];
+        }
+        return arr3;
+    }
+
+    console.log('Task 2');
+    console.log(sumArrayElements([1, 2, 3, 4], [2, 3, 4, 5]));
+
+    /*- Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+    EXAMPLE:
+        [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ] */
+
+    function getArrayOfObjKeys(arr) {
+        let keys = [];
+        for (const arrElement of arr) {
+            for (const arrElementKey in arrElement) {
+                keys.push(arrElementKey);
+            }
+        }
+        return keys;
+    }
+
+    console.log('Task 3');
+    console.log(getArrayOfObjKeys([{name: 'Dima', age: 13}, {model: 'Camry'}]));
+
+    /* - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+    EXAMPLE:
+        [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ] */
+
+    function getArrayOfObjValues(arr) {
+        let keys = [];
+        for (const arrElement of arr) {
+            for (const arrElementKey in arrElement) {
+                keys.push(arrElement[arrElementKey]);
+            }
+        }
+        return keys;
+    }
+
+    console.log('Task 4');
+    console.log(getArrayOfObjValues([{name: 'Dima', age: 13}, {model: 'Camry'}]));
+
+</script>
 </body>
 </html>
