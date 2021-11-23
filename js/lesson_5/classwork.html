@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /* - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!) */
+    let minNum = (a, b, c) => {
+        if ((a <= b) && (a <= c)) {
+            console.log(a);
+        } else if ((b <= a) && (b <= c)) {
+            console.log(b);
+        } else if ((c <= a) && (c <= b)) {
+            console.log(c);
+        }
+    }
+
+    console.log('створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)');
+    minNum(2, 4, 1);
+
+    /* - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!) */
+    let maxNum = (a, b, c) => {
+        if ((a >= b) && (a >= c)) {
+            console.log(a);
+        } else if ((b >= a) && (b >= c)) {
+            console.log(b);
+        } else if ((c >= a) && (c >= b)) {
+            console.log(c);
+        }
+    }
+
+    console.log('створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)');
+    maxNum(2, 5, 1);
+
+    /* - створити функцію як.а повертає найбільше число з масиву */
+    let maxInArray = (arr) => {
+        let maxItem = arr[0];
+        for (const arrElement of arr) {
+            if (maxItem < arrElement) {
+                maxItem = arrElement;
+            }
+        }
+        return maxItem;
+    }
+
+    console.log('створити функцію яка повертає найбільше число з масиву');
+    console.log(maxInArray([2, 51, 1, 34, 54, 32]));
+
+    /* - створити функцію яка повертає найменьше число з масиву */
+    let minInArray = (arr) => {
+        let minItem = arr[0];
+        for (const arrElement of arr) {
+            if (minItem > arrElement) {
+                minItem = arrElement;
+            }
+        }
+        return minItem;
+    }
+
+    console.log('створити функцію яка повертає найменьше число з масиву');
+    console.log(minInArray([2, 51, 1, 34, 54, 32]));
+
+    /* - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13 */
+    let sumArray = (arr) => {
+        let sum = 0;
+        for (const arrElement of arr) {
+            sum += arrElement;
+        }
+        return sum;
+    }
+
+    console.log('створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його');
+    console.log(sumArray([1, 2, 10]));
+
+    /* - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень. */
+    let avgArray = (arr) => {
+        return sumArray(arr) / arr.length;
+    }
+
+    console.log('створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень');
+    console.log(avgArray([1, 2, 10]));
+
+    /* - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено); */
+    let minMaxArray = (arr) => {
+        let min = arr[0];
+        let max = arr[0];
+        for (const arrElement of arr) {
+            if (min > arrElement) {
+                min = arrElement;
+            }
+            if (max < arrElement) {
+                max = arrElement;
+            }
+        }
+        console.log(max);
+        return min;
+    }
+
+    console.log('створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше');
+    console.log(minMaxArray([1, 2, 10, 2, 4]));
+
+    /* - створити функцію яка заповнює масив рандомними числами
+    (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його. */
+    let randomizer = () => {
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = Math.round(Math.random() * 100);
+            console.log(arr[i]);
+        }
+    }
+
+    console.log('створити функцію яка заповнює масив рандомними числами (цей код генерує рандомні числа в діапазоні від 0 до 100)');
+    randomizer();
+
+    /* - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону. */
+    let randomizerLimit = (limit) => {
+        let arr = [];
+        for (let i = 0; i < limit; i++) {
+            arr[i] = Math.round(Math.random() * 100);
+        }
+        return arr;
+    }
+
+    console.log('створити функцію яка заповнює масив рандомними числами (цей код генерує рандомні числа в діапазоні від 0 до 100)');
+    console.log(randomizerLimit(20));
+
+    /* - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1]. */
+    let reverseArray = (arr) => {
+        let newArray = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+            newArray.push(arr[i]);
+        }
+        return newArray;
+    }
+
+    console.log('Функція приймає масив та робить з нього новий масив в зворотньому порядку.');
+    console.log(reverseArray([1, 2, 3]));
+
+</script>
+</body>
+</html>

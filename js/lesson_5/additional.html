@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // - Дано натуральное число n. Выведите все числа от 1 до n.
+    let printNElements = (n) => {
+        for (let i = 1; i < n; i++) {
+            console.log(i);
+        }
+    }
+
+    console.log('Дано натуральное число n. Выведите все числа от 1 до n.');
+    printNElements(10);
+
+    // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+
+    let printSortedRange = function (a, b) {
+        if (a < b) {
+            for (let i = a; i <= b; i++) {
+                console.log(i);
+            }
+        } else {
+            for (let i = a; i >= b; i--) {
+                console.log(i);
+            }
+        }
+    }
+
+    console.log('Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.');
+    console.log('A < B');
+    printSortedRange(2, 10);
+    console.log('A > B');
+    printSortedRange(12, 3);
+
+    // - функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+    let foo = (arr, i) => {
+        let tmp;
+        for (let j = 0; j < arr.length; j++) {
+            if (j === i && (j + 1) <= arr.length - 1) {
+                tmp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+        console.log(arr);
+    }
+
+    console.log('функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"');
+    foo([9, 8, 0, 4], 0);
+    foo([9, 8, 0, 4], 1);
+    foo([9, 8, 0, 4], 2);
+
+    // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень. Двожина масиву від 2 до 100
+    let zeroToTheEnd = (arr) => {
+        let newArr = [];
+        /* collect non zero elements */
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== 0) {
+                newArr.push(arr[i]);
+            }
+        }
+        /* total zero elements */
+        let difLen = arr.length - newArr.length;
+        for (let i = 0; i < difLen; i++) {
+            newArr.push(0);
+        }
+        console.log(newArr);
+    }
+
+    console.log('Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.');
+    zeroToTheEnd([1, 0, 0, 0, 3]);
+    zeroToTheEnd([0, 1, 2, 3, 4]);
+    zeroToTheEnd([0, 0, 1, 0]);
+
+</script>
+</body>
+</html>
