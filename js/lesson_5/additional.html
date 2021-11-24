@@ -56,7 +56,7 @@
     foo([9, 8, 0, 4], 2);
 
     // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень. Двожина масиву від 2 до 100
-    let zeroToTheEnd = (arr) => {
+    let zeroToTheEndV1 = (arr) => {
         let newArr = [];
         /* collect non zero elements */
         for (let i = 0; i < arr.length; i++) {
@@ -72,10 +72,34 @@
         console.log(newArr);
     }
 
+    let zeroToTheEndV2 = (arr) => {
+        let tmp = null;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 0) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] === 0) {
+                        continue;
+                    } else {
+                        tmp = arr[j];
+                        arr[i] = tmp;
+                        arr[j] = 0;
+                        break;
+                    }
+                }
+            }
+        }
+        console.log(arr);
+    }
+
     console.log('Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.');
-    zeroToTheEnd([1, 0, 0, 0, 3]);
-    zeroToTheEnd([0, 1, 2, 3, 4]);
-    zeroToTheEnd([0, 0, 1, 0]);
+
+    zeroToTheEndV1([1, 0, 0, 0, 3]);
+    zeroToTheEndV1([0, 1, 2, 3, 4]);
+    zeroToTheEndV1([0, 0, 1, 0]);
+
+    zeroToTheEndV2([1, 0, 0, 0, 3]);
+    zeroToTheEndV2([0, 1, 2, 3, 4]);
+    zeroToTheEndV2([0, 0, 1, 0]);
 
 </script>
 </body>
