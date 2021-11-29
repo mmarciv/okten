@@ -157,15 +157,13 @@
     879 -> 24
     11 -> 2 */
 
-    function sumNumberItems(num, sum) {
-        if (sum == undefined) sum = 0;
+    function sumNumberItems(num) {
         let y = num % 10; // остача від ділення
-        let x = Math.floor(num / 10); // ціле значення
-        sum += y; // сума
+        let x = Math.trunc(num / 10); // ціле значення
         if (x !== 0) {
-            sum = sumNumberItems(x, sum);
+            y += sumNumberItems(x);
         }
-        return sum;
+        return y;
     }
 
     console.log(sumNumberItems(1234));
