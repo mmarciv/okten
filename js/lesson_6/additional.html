@@ -145,6 +145,31 @@
     document.writeln('<h2>Task 4</h2>');
     document.writeln(cutString(strX, 5))
 
+    /* Задачка для тех кто все сделал и ему хочется размять мозг:
+        Сумма цифр числа
+    Дано натуральное число N. Вычислите сумму его цифр.
+        При решении этой задачи нельзя использовать строки,
+        массивы ну и циклы
+    Вам поможет Рекурсія)
+
+    пример:
+        1234 -> 10
+    879 -> 24
+    11 -> 2 */
+
+    function sumNumberItems(num, sum) {
+        if (sum == undefined) sum = 0;
+        let y = num % 10; // остача від ділення
+        let x = Math.floor(num / 10); // ціле значення
+        sum += y; // сума
+        if (x !== 0) {
+            sum = sumNumberItems(x, sum);
+        }
+        return sum;
+    }
+
+    console.log(sumNumberItems(1234));
+
 </script>
 </body>
 </html>
