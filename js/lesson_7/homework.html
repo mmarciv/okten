@@ -5,6 +5,73 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 
+    /*- Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    створити пустий масив, наповнити його 10 об'єктами new User(....)*/
+
+    function User(id, name, surname, email, phone) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    let users = [];
+    for (let i = 0; i < 10; i++) {
+        users.push(new User(i, 'Name ' + i, 'Surname ' + i, 'email_' + i + '@test.com', '0982222220' + i))
+    }
+    console.log(users);
+
+    /*- Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши
+        тільки об'єкти з парними id (filter)*/
+
+    let usersWithPairId = users.filter(value => value.id % 2 === 0);
+    console.log(usersWithPairId);
+
+    /*- Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)*/
+
+    let sortedUsersWithPairId = usersWithPairId.sort((a, b) => {
+        return a.id - b.id;
+    });
+    console.log(sortedUsersWithPairId);
+
+    /*- створити класс для об'єктів Client з полями id, name, surname , email, phone,
+        order (поле є масивом зі списком товарів) створити пустий масив, наповнити його 10 об'єктами Client*/
+
+    class Client {
+        constructor(id, name, surname, email, phone, order) {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+            this.order = order;
+        }
+    }
+
+    let clients = [];
+
+    clients.push(new Client(1, 'Name 1', 'Surname 1', 'email_1@test.com', '09822222201', [1, 2, 3, 2, 2, 2,]));
+    clients.push(new Client(2, 'Name 2', 'Surname 1', 'email_2@test.com', '09822222201', [1, 2, 3, 4, 2]));
+    clients.push(new Client(3, 'Name 3', 'Surname 1', 'email_11@test.com', '09822222201', [1, 2, 3]));
+    clients.push(new Client(4, 'Name 4', 'Surname 1', 'email_21@test.com', '09822222201', [1, 2, 3, 1]));
+    clients.push(new Client(5, 'Name 5', 'Surname 1', 'email_441@test.com', '09822222201', [1, 2, 3]));
+    clients.push(new Client(6, 'Name 6', 'Surname 1', 'email_221@test.com', '09822222201', [1, 2, 3, 11, 1, 1, 1, 1, 1, 1, 1]));
+    clients.push(new Client(7, 'Name 7', 'Surname 1', 'email_221@test.com', '09822222201', [1, 2, 3, 2, 1, 1]));
+    clients.push(new Client(8, 'Name 8', 'Surname 1', 'email_s1@test.com', '09822222201', [1, 2, 3]));
+    clients.push(new Client(9, 'Name 9', 'Surname 1', 'email_s1@test.com', '09822222201', [1, 2]));
+    clients.push(new Client(10, 'Name 10', 'Surname 1', 'email_1s@test.com', '09822222201', [1, 2, 3, 2]));
+
+    console.log(clients);
+
+    /*- Взяти масив (Client [] з попереднього завдання).Відсортувати його
+    по кількості товарів в полі order по зростанню. (sort)*/
+
+    let sortedClientsByOrder = clients.sort((a, b) => a.order.length - b.order.length);
+    console.log(sortedClientsByOrder);
+
+</script>
 </body>
 </html>
