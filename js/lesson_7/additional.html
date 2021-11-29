@@ -5,6 +5,110 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    /*- Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
+    Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів */
 
+    class Organisation {
+        constructor(id, name, username, email, addressStreet, addressSuite, addressCity, addressZipcode,
+                    addressGeoLat, addressGeoLng, phone, website, companyName, companyCatchPhrase, companyBs) {
+            this.id = id;
+            this.name = name;
+            this.username = username;
+            this.email = email;
+            this.address = {
+                street: addressStreet,
+                suite: addressSuite,
+                city:  addressCity,
+                zipcode: addressZipcode,
+                geo: {
+                    lat: addressGeoLat,
+                    lng: addressGeoLng
+                }
+            };
+            this.phone = phone;
+            this.website = website;
+            this.company = {
+                name: companyName,
+                catchPhrase: companyCatchPhrase,
+                bs: companyBs
+            }
+        }
+    }
+
+    let org = new Organisation(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz',
+        'Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874', '-37.3159', '81.1496',
+        '1-770-736-8031 x56442', 'hildegard.org', 'Romaguera-Crona', 'Multi-layered client-server neural-net',
+        'harness real-time e-markets');
+
+    console.log(org)
+
+    /* -  Створити функцію конструктор / клас  який описує об'єкт тегу */
+
+    class HtmlTag {
+        constructor(titleOfTag, action, attrs) {
+            this.titleOfTag = titleOfTag;
+            this.action = action;
+            this.attrs = attrs;
+        }
+    }
+
+    class HtmlTagAttr {
+        constructor(titleOfTag, actionOfAttr) {
+            this.titleOfTag = titleOfTag;
+            this.actionOfAttr = actionOfAttr;
+        }
+    }
+
+    let aTag = new HtmlTag('a', 'Links allow users to click their way from page to page.', [
+        new HtmlTagAttr('href', 'Indicates the link\'s destination'),
+        new HtmlTagAttr('target', 'Specifies where to open the linked document.'),
+    ]);
+
+    let divTag = new HtmlTag('div', 'Used as a container for other HTML elements.', [
+        new HtmlTagAttr('style', 'Used to style blocks of content.'),
+        new HtmlTagAttr('id', 'Used to specify a unique id for an HTML element.'),
+    ]);
+
+    let h1Tag = new HtmlTag('h1', 'HTML headings are titles or subtitles that you want to display on a webpage.', [
+        new HtmlTagAttr('style', 'Used to style blocks of content.'),
+        new HtmlTagAttr('id', 'Used to specify a unique id for an HTML element.'),
+    ]);
+
+    let spanTag = new HtmlTag('span', 'An inline element does not start on a new line.', [
+        new HtmlTagAttr('style', 'Used to style blocks of content.'),
+        new HtmlTagAttr('id', 'Used to specify a unique id for an HTML element.'),
+    ]);
+
+    let inputTag = new HtmlTag('input', 'Describes the different types for the HTML <input> element.', [
+        new HtmlTagAttr('value', 'Specifies an initial value for an input field.'),
+        new HtmlTagAttr('readonly', 'Specifies that an input field is read-only.'),
+    ]);
+
+    let formTag = new HtmlTag('form', 'Used to collect user input.', [
+        new HtmlTagAttr('action', 'Defines the action to be performed when the form is submitted.'),
+        new HtmlTagAttr('target', 'Specifies where to display the response that is received after submitting the form.'),
+        new HtmlTagAttr('method', 'Specifies the HTTP method to be used when submitting the form data.'),
+    ]);
+
+    let optionTag = new HtmlTag('option', 'Defines an option that can be selected.', [
+        new HtmlTagAttr('value', 'Specifies an initial value.'),
+    ]);
+
+    let selectTag = new HtmlTag('select', 'The <select> element defines a drop-down list.', [
+        new HtmlTagAttr('id', 'Used to specify a unique id for an HTML element.'),
+        new HtmlTagAttr('name', 'Used to specify name for an HTML element.'),
+    ]);
+
+    console.log(aTag);
+    console.log(divTag);
+    console.log(h1Tag);
+    console.log(spanTag);
+    console.log(inputTag);
+    console.log(formTag);
+    console.log(optionTag);
+    console.log(selectTag);
+
+</script>
 </body>
 </html>
