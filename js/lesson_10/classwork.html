@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Task 1</h2>
+
+<form id="login" action="/login">
+    <label>
+        Username
+        <input type="text" name="username">
+    </label>
+    <label>
+        Password
+        <input type="password" name="password">
+    </label>
+</form>
+
+<form id="registration" action="/registration">
+    <label>
+        Username
+        <input type="text" name="username">
+    </label>
+    <label>
+        Age
+        <input type="number" name="age">
+    </label>
+</form>
+
+<button id="btn-form-info">Читати дані форм</button>
+
+<h2>Task 2</h2>
+<label>
+    Rows.
+    <input type="number" id="rows-id" name="rows">
+</label>
+<label>
+    Cells.
+    <input type="number" id="cells-id" name="cells">
+</label>
+<label>
+    Content.
+    <input type="text" id="cell-content-id" name="cell_content">
+</label>
+<button id="btn-create-table">Create Table</button>
+
+<h2>Task 3</h2>
+<label>
+    Enter the word.
+    <input type="text" id="bad-word-id" name="bad-word">
+    <button id="btn-check-bad-word">Check Word</button>
+</label>
+
+<h2>Task 4</h2>
+<label>
+    Enter sentence.
+    <input type="text" id="sentence-id" name="sentence">
+    <button id="btn-check-sentence">Check Sentence</button>
+</label>
+
+<script>
+
+    /*- створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
+        Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
+    Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути. */
+
+    let btn = document.getElementById('btn-form-info');
+    btn.onclick = function () {
+        let loginUsername = document.forms.login.username.value;
+        let loginPassword = document.forms.login.password.value;
+        let regUsername = document.forms.registration.username.value;
+        let regAge = document.forms.registration.username.value;
+        console.log(loginUsername, loginPassword);
+        console.log(regUsername, regAge);
+    }
+
+    /* - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
+        При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+    (Додатковачастина для завдання) */
+
+    let btnCreateTable = document.getElementById('btn-create-table');
+    btnCreateTable.onclick = function (e) {
+        let rows = document.getElementById('rows-id').value;
+        let cells = document.getElementById('cells-id').value;
+        let content = document.getElementById('cell-content-id').value;
+        let table = document.createElement('table');
+        for (let i = 0; i < rows; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < cells; j++) {
+                let td = document.createElement('td');
+                td.innerText = content;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        document.body.appendChild(table);
+    }
+
+    /* - Сворити масив не цензцрних слів. Сворити інпут текстового типу.
+        Якщо людина вводить слово і воно міститься в масиві не цензурних слів кинути алерт з попередженням.
+        Перевірку робити при натисканні на кнопку */
+
+    let blackList = ['word1', 'word2', 'word3', 'word4', 'word5'];
+    let btnCheckWord = document.getElementById('btn-check-bad-word');
+    btnCheckWord.onclick = function () {
+        let badWord = document.getElementById('bad-word-id').value;
+        if (blackList.indexOf(badWord) !== -1) {
+            alert('Your typed word is bad');
+        } else {
+            console.log(badWord);
+        }
+    }
+
+    /* - Сворити масив не цензцрних слів.Сворити інпут текстового типу.
+        Потрібно перевіряти чи не містить ціле речення в собі погані слова.
+        Кинути алерт з попередженням у випадку якщо містить.
+        Перевірку робити при натисканні на кнопку */
+
+    let btnCheckSentence = document.getElementById('btn-check-sentence');
+    btnCheckSentence.onclick = function () {
+        let sentence = document.getElementById('sentence-id').value;
+        let words = sentence.split(' ');
+        for (const word of words) {
+            if (blackList.indexOf(word) !== -1) {
+                alert('You have bad words in sentence');
+                return;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
