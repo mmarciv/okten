@@ -5,10 +5,43 @@
     <title>Title</title>
     <style>
         label {
-            display: inline-block;
+            display: block;
         }
+
         .font-red {
             color: red;
+        }
+
+        .carousel {
+            background-color: #86b7fe;
+            width: 400px;
+            height: 200px;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .carousel-next,
+        .carousel-prev {
+            width: 50px;
+            background-color: #0c63e4;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .carousel-item {
+            width: 100%;
+            background-color: #0dcaf0;
+            display: none;
+        }
+
+        .carousel-item.active {
+            width: 100%;
+            background-color: #0dcaf0;
+            display: block;
         }
     </style>
 </head>
@@ -32,6 +65,8 @@
     оставляет тех у кого город киев
     <input type="checkbox" id="cb-city">
 </label>
+
+<h2>Carousel</h2>
 
 <script>
 
@@ -127,19 +162,78 @@
     */
 
     /* - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки. */
+    let images = [
+        'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png',
+        'http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png',
+        'https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png',
+        'https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png',
+        'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
+    ];
+
+    function createCarousel(images) {
+        let wrapper = document.createElement('div');
+        let nextEl = document.createElement('div');
+        let prevEl = document.createElement('div');
+
+        wrapper.classList.add('carousel');
+        nextEl.classList.add('carousel-next');
+        prevEl.classList.add('carousel-prev');
+
+        nextEl.innerText = ">";
+        prevEl.innerText = "<";
+
+        nextEl.onclick = function () {
+            let activeSlide = document.querySelector('.carousel-item.active');
+            if (activeSlide) {
+                let nextSlide = activeSlide.nextElementSibling;
+                if (nextSlide && nextSlide.classList.contains('carousel-item')) {
+                    activeSlide.classList.toggle('active');
+                    nextSlide.classList.toggle('active');
+                }
+            }
+        };
+
+        prevEl.onclick = function () {
+            let activeSlide = document.querySelector('.carousel-item.active');
+            if (activeSlide) {
+                let prevSlide = activeSlide.previousElementSibling;
+                if (prevSlide && prevSlide.classList.contains('carousel-item')) {
+                    activeSlide.classList.toggle('active');
+                    prevSlide.classList.toggle('active');
+                }
+            }
+        };
+
+        wrapper.appendChild(prevEl);
+
+        for (let i = 0; i < images.length; i++) {
+            let item = images[i];
+            let carouselItem = document.createElement('div');
+            carouselItem.classList.add('carousel-item');
+            if (i === 0) {
+                carouselItem.classList.add('active');
+            }
+            let carouselItemImg = document.createElement('img');
+            carouselItemImg.src = item;
+            carouselItemImg.style.width = '100%';
+            carouselItemImg.style.height = '100%';
+            carouselItem.appendChild(carouselItemImg);
+            wrapper.appendChild(carouselItem);
+        }
+
+        wrapper.appendChild(nextEl);
+        document.body.appendChild(wrapper);
+    }
+
+    createCarousel(images);
 
     /*    Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
     *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан */
 
-    document.onselectionchange = function (e) {
-        let sel = document.getSelection();
-        console.log(document.getSelection());
-        let start = sel.baseOffset;
-        let end = sel.focusOffset;
-        let node = sel.focusNode;
-        let nodeValue = node.nodeValue;
-        node.nodeValue = sel.toString().toUpperCase() + nodeValue.substr(end);
-    }
+    /* document.addEventListener('mouseup', function () {
+        let selText = window.getSelection().toString();
+        document.body.innerHTML = document.body.innerHTML.replace(selText, '<span class="font-red">' + selText + '</span>');
+    }); */
 
 </script>
 </body>
