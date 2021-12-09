@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* Створити сторніку favorites.html при переході на яку потрібно вивест в документ
+       всіх обраних на попередньому етапі */
+
+    for (const key in localStorage) {
+        let item = JSON.parse(localStorage.getItem(key));
+        let p = document.createElement('p');
+        p.innerText = `${item.name} - ${item.age}, ${item.status}`;
+        document.body.appendChild(p);
+    }
+</script>
+</body>
+</html>
