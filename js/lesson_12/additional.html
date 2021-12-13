@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .users, .posts, .comments {
+            flex-basis: 30%;
+            justify-content: center;
+        }
+
+        .user-item, .post-item, .comment-item {
+            background-color: #86b7fe;
+            padding: 25px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        .post-item {
+            background-color: #0dcaf0;
+        }
+
+        .comment-item {
+            background-color: #ece1be;
+        }
+
+        .user-item:hover, .post-item:hover, .comment-item:hover {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="users">
+        <h1>Users</h1>
+        <div class="users-list"></div>
+    </div>
+    <div class="posts">
+        <h1>Posts</h1>
+        <div class="posts-list"></div>
+    </div>
+    <div class="comments">
+        <h1>Comments</h1>
+        <div class="comments-list"></div>
+    </div>
+</div>
+
+<script>
+
+    /* Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
+       https://jsonplaceholder.typicode.com/users
+       кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.
+       Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста */
+
+    let usersBlock = document.getElementsByClassName('users-list')[0];
+    let postsBlock = document.getElementsByClassName('posts-list')[0];
+    let commentsBlock = document.getElementsByClassName('comments-list')[0];
+
+    function createUserBlock(user) {
+        let container = document.createElement('div');
+        let name = document.createElement('h2');
+        let username = document.createElement('h3');
+        let emailEl = document.createElement('div');
+        let phoneEl = document.createElement('div');
+        let website = document.createElement('p');
+        let btn = document.createElement('button');
+        container.classList.add('user-item');
+        name.innerText = user.name;
+        username.innerText = user.username;
+        emailEl.innerText = user.email;
+        phoneEl.innerText = user.phone;
+        website.innerText = user.website;
+        btn.innerText = 'Posts'
+        btn.onclick = function () {
+            loadPosts(user.id);
+        }
+        container.append(name, username, emailEl, phoneEl, website, btn)
+        return container;
+    }
+
+    function createPostBlock(post) {
+        let container = document.createElement('div');
+        let title = document.createElement('h2');
+        let body = document.createElement('p');
+        let btn = document.createElement('button');
+        container.classList.add('post-item');
+        title.innerText = post.title;
+        body.innerText = post.body;
+        btn.innerText = 'show comments'
+        btn.onclick = function () {
+            loadComments(post.id);
+        }
+        container.append(title, body, btn)
+        return container;
+    }
+
+    function createCommentsBlock(comment) {
+        let container = document.createElement('div');
+        let name = document.createElement('h2');
+        let email = document.createElement('h3');
+        let body = document.createElement('p');
+        container.classList.add('comment-item');
+        name.innerText = comment.name;
+        email.innerText = comment.email;
+        body.innerText = comment.body;
+        container.append(name, email, body)
+        return container;
+    }
+
+    function loadUsers() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(users => {
+                for (const user of users) {
+                    usersBlock.appendChild(createUserBlock(user));
+                }
+            });
+    }
+
+    function loadPosts(userId) {
+        fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
+            .then(response => response.json())
+            .then(posts => {
+                postsBlock.innerText = '';
+                for (const post of posts) {
+                    postsBlock.appendChild(createPostBlock(post));
+                }
+            });
+    }
+
+    function loadComments(postId) {
+        fetch('https://jsonplaceholder.typicode.com/posts/' + postId + '/comments')
+            .then(response => response.json())
+            .then(comments => {
+                commentsBlock.innerText = '';
+                for (const comment of comments) {
+                    commentsBlock.appendChild(createCommentsBlock(comment));
+                }
+            });
+    }
+
+    loadUsers();
+
+</script>
+</body>
+</html>
