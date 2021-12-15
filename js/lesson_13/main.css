@@ -1,0 +1,23 @@
+form label,
+form input {
+    width: 200px;
+    display: block;
+    padding: 5px 0;
+}
+.wrap {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.product {
+    max-width: 200px;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}

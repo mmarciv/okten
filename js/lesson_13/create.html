@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<h1>Our shop</h1>
+<h2>Add new product</h2>
+<form id="add_product_form" action="/">
+    <label for="name">Name
+        <input type="text" name="name" id="name">
+    </label>
+    <label for="quantity">Quantity
+        <input type="number" name="quantity" id="quantity">
+    </label>
+    <label for="price">Price
+        <input type="number" name="price" id="price">
+    </label>
+    <label for="image_url">Image url
+        <input type="text" name="image_url" id="image_url" value="https://via.placeholder.com/150/92c952">
+    </label>
+    <button type="submit">Save</button>
+</form>
+<script type="text/javascript" src="main.js"></script>
+<script>
+    createProduct();
+</script>
+</body>
+</html>
