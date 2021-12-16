@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+<script type="text/javascript" src="base.js"></script>
+<script>
+    wakeUp().then(res => {
+        return takeShower();
+    }).then(res => {
+        return haveBreakfast();
+    }).then(res => {
+        return takeChildrenToSchool();
+    }).then(res => {
+        return goWork();
+    }).then(res => {
+        return readEmail();
+    }).then(res => {
+        return haveMeeting();
+    }).then(res => {
+        return haveDinner();
+    }).then(res => {
+        return doWork();
+    }).then(res => {
+        return walkHome();
+    }).then(res => {
+        return haveSupper();
+    }).then(res => {
+        return doHomework();
+    }).then(res => {
+        return cleaningTeeth();
+    }).then(res => {
+        return goSleep();
+    }).catch(reason => {
+        console.log(reason);
+    }).finally(() => {
+        console.log('Добраніч');
+    });
+</script>
+</body>
+</html>
