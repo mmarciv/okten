@@ -19,12 +19,16 @@
 // Почистити зуби
 // Піти спати
 
-function wakeUp() {
+function wakeUp(isReady) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('Доброго ранку');
-            console.log('Прокнутись');
-            resolve('Я прокинувся');
+            if (isReady) {
+                console.log('Прокнутись');
+                resolve('Я прокинувся');
+            } else {
+                reject('Вирішив поспати ще, сьогодні вихідний');
+            }
         }, 3000);
     });
 }
@@ -56,11 +60,15 @@ function takeChildrenToSchool() {
     });
 }
 
-function goWork() {
+function goWork(isReady) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Поїхати на роботу');
-            resolve('Поїхати на роботу');
+            if(isReady) {
+                console.log('Поїхати на роботу');
+                resolve('Поїхати на роботу');
+            } else {
+                reject('Зламався трамвай');
+            }
         }, 1000);
     });
 }
@@ -74,11 +82,15 @@ function readEmail() {
     });
 }
 
-function haveMeeting() {
+function haveMeeting(isReady) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Відвідати Нараду');
-            resolve('Відвідати Нараду');
+            if (isReady) {
+                console.log('Відвідати Нараду');
+                resolve('Відвідати Нараду');
+            } else {
+                reject('Нараду скасовано')
+            }
         }, 2000);
     });
 }
@@ -128,11 +140,15 @@ function doHomework() {
     })
 }
 
-function cleaningTeeth() {
+function cleaningTeeth(isReady) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Почистити зуби');
-            resolve('Почистити зуби');
+            if (isReady) {
+                console.log('Почистити зуби');
+                resolve('Почистити зуби');
+            } else {
+                reject('Закінчилась зубна паста');
+            }
         }, 500);
     })
 }
@@ -147,18 +163,22 @@ function goSleep() {
 }
 
 async function startDay() {
-    const r1 = await wakeUp();
-    const r2 = await takeShower();
-    const r3 = await haveBreakfast();
-    const r4 = await takeChildrenToSchool();
-    const r5 = await goWork();
-    const r6 = await readEmail();
-    const r7 = await haveMeeting();
-    const r8 = await haveDinner();
-    const r9 = await doWork();
-    const r10 = await walkHome();
-    const r11 = await haveSupper();
-    const r12 = await doHomework();
-    const r13 = await cleaningTeeth();
-    const r14 = await goSleep();
+    try{
+        const r1 = await wakeUp(true);
+        const r2 = await takeShower();
+        const r3 = await haveBreakfast();
+        const r4 = await takeChildrenToSchool();
+        const r5 = await goWork();
+        const r6 = await readEmail();
+        const r7 = await haveMeeting();
+        const r8 = await haveDinner();
+        const r9 = await doWork();
+        const r10 = await walkHome();
+        const r11 = await haveSupper();
+        const r12 = await doHomework();
+        const r13 = await cleaningTeeth();
+        const r14 = await goSleep();
+    }catch (e) {
+        console.log(e);
+    }
 }

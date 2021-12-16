@@ -7,18 +7,18 @@
 <body>
 <script type="text/javascript" src="base.js"></script>
 <script>
-    wakeUp().then(res => {
+    wakeUp(true).then(res => {
         return takeShower();
     }).then(res => {
         return haveBreakfast();
     }).then(res => {
         return takeChildrenToSchool();
     }).then(res => {
-        return goWork();
+        return goWork(true);
     }).then(res => {
         return readEmail();
     }).then(res => {
-        return haveMeeting();
+        return haveMeeting(true);
     }).then(res => {
         return haveDinner();
     }).then(res => {
@@ -30,7 +30,7 @@
     }).then(res => {
         return doHomework();
     }).then(res => {
-        return cleaningTeeth();
+        return cleaningTeeth(true);
     }).then(res => {
         return goSleep();
     }).catch(reason => {

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+<script>
+
+    function wakeUp(isReady, callback) {
+        setTimeout(() => {
+            if (isReady) {
+                console.log('Доброго ранку');
+                callback();
+            } else {
+                console.log('Вирішив поспати ще, сьогодні вихідний');
+            }
+        }, 3000);
+    }
+
+    function takeShower(callback) {
+        setTimeout(() => {
+            console.log('Піти в душ');
+            callback();
+        }, 5000);
+    }
+
+    function haveBreakfast(callback) {
+        setTimeout(() => {
+            console.log('Сніданок');
+            callback();
+        }, 1000);
+    }
+
+    function takeChildrenToSchool(callback) {
+        setTimeout(() => {
+            console.log('Відвезти дітей до школи');
+            callback();
+        }, 3000);
+    }
+
+    function goWork(isReady, callback) {
+        setTimeout(() => {
+            if (isReady) {
+                console.log('Поїхати на роботу');
+                callback();
+            } else {
+                console.log('Зламався трамвай');
+            }
+        }, 1000);
+    }
+
+    function readEmail(callback) {
+        setTimeout(() => {
+            console.log('Почитати пошту');
+            callback();
+        }, 5000);
+    }
+
+    function haveMeeting(isReady, callback) {
+        setTimeout(() => {
+            if (isReady) {
+                console.log('Відвідати Нараду');
+                callback();
+            } else {
+                console.log('Нараду скасовано')
+            }
+        }, 2000);
+    }
+
+    function haveDinner(callback) {
+        setTimeout(() => {
+            console.log('Пообідати');
+            callback();
+        }, 3000);
+    }
+
+    function doWork(callback) {
+        setTimeout(() => {
+            console.log('Попрацювати');
+            callback();
+        }, 7000);
+    }
+
+    function walkHome(callback) {
+        setTimeout(() => {
+            console.log('Піти пішки додому');
+            callback();
+        }, 7000);
+    }
+
+    function haveSupper(callback) {
+        setTimeout(() => {
+            console.log('Повечеряти');
+            callback();
+        }, 3000);
+    }
+
+    function doHomework(callback) {
+        setTimeout(() => {
+            console.log('Зробити домашні справи');
+            callback();
+        }, 1000);
+    }
+
+    function cleaningTeeth(isReady, callback) {
+        setTimeout(() => {
+            if (isReady) {
+                console.log('Почистити зуби');
+                callback();
+            } else {
+                console.log('Закінчилась зубна паста');
+            }
+        }, 500);
+    }
+
+    function goSleep() {
+        setTimeout(() => {
+            console.log('Піти спати');
+        }, 1500);
+    }
+
+    wakeUp(true, () => {
+        takeShower(() => {
+            haveBreakfast(() => {
+                takeChildrenToSchool(() => {
+                    goWork(true, () => {
+                        readEmail(() => {
+                            haveMeeting(true, () => {
+                                haveDinner(() => {
+                                    doWork(() => {
+                                        walkHome(() => {
+                                            haveSupper(() => {
+                                                doHomework(() => {
+                                                    cleaningTeeth(true, () => {
+                                                        goSleep();
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
