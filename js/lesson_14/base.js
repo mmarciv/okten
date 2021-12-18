@@ -182,3 +182,47 @@ async function startDay() {
         console.log(e);
     }
 }
+
+let days = [
+    {name: 'monday', isOpen: true},
+    {name: 'thusday', isOpen: true},
+    {name: 'wednesday', isOpen: true},
+    {name: 'thusday', isOpen: true},
+    {name: 'friday', isOpen: false},
+    {name: 'suturday', isOpen: false},
+    {name: 'sunday', isOpen: false},
+];
+
+function getDay(dayName) {
+    let index = 0;
+    let day = days[0];
+    for (let i = 0; i < days.length; i++) {
+        if (days[i].name === dayName) {
+            day = days[i];
+            index = i;
+            break;
+        }
+    }
+    return {day, index};
+}
+
+function nextDay(dayName) {
+    let {day, index} = getDay(dayName);
+    if (index !== -1) {
+        if (day.isOpen) {
+            console.log('Next working day is ' + dayName);
+            return;
+        } else {
+            index = index + 1;
+            if (index < days.length) {
+                day = days[index];
+            } else {
+                index = 0;
+                day = days[index];
+            }
+            nextDay(day.name, index);
+        }
+    }
+}
+
+// nextDay('friday');
